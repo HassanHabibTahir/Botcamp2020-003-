@@ -32,8 +32,8 @@ jobs:
       - name: instaling dependencies
         run:  npm install
       - name: build
-        run: npm run build
+        run: cd Botcamp2020-003- && npm run build
       - name: Install Surge
         run: npm install -g surge
       - name: Deploying on surge
-        run: surge build hassanproject0003.surge.sh --token ${{ secrets.TOKEN }}
+        run: surge ./build hassanproject0003.surge.sh --token ${{ secrets.TOKEN }}
