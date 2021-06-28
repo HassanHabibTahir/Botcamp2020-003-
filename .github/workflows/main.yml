@@ -19,8 +19,8 @@ jobs:
       - name: instaling dependencies
         run: yarn --cwd yarn install
       - name: project003
-        run: yarn --cwd /build
+        run: yarn --cwd cd build
       - name: Install Surge
         run: npm install -g surge
       - name: Run surge
-        run: surge /build bootcamp-2020_003_shoseapp.surge.sh --token ${{ secrets.TOKEN }}
+        run: surge cd build bootcamp-2020_003_shoseapp.surge.sh --token ${{ secrets.TOKEN }}
